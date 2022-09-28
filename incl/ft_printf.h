@@ -6,7 +6,7 @@
 /*   By: coder <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 12:28:37 by coder             #+#    #+#             */
-/*   Updated: 2022/09/28 06:20:49 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/28 19:27:24 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,5 @@
 
 void	print_hex(int n, char option);
 int		ft_printf(const char *format, ...);
-void	print_pointer(void *p);
+int		print_pointer(void *p);
 #endif

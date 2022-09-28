@@ -6,7 +6,7 @@
 /*   By: coder <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 12:27:56 by coder             #+#    #+#             */
-/*   Updated: 2022/09/28 08:58:39 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/28 19:15:06 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static int	print_formats(va_list ap, const char fmt)
 	else if (fmt == 'u')
 		len += ft_putstr(ft_itoa(va_arg(ap, unsigned int)));
 	else if (fmt == 'p')
-		ft_putnbr_hex(va_arg(ap, unsigned int), 'l');
+		ft_putnbr_hex(va_arg(ap, void *), 'l');
 	else if (fmt == 'x')
 		ft_putnbr_hex(va_arg(ap, int), 'l');
 	else if (fmt == 'X')

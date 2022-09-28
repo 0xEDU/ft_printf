@@ -6,7 +6,7 @@
 #    By: coder <coder@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/27 15:51:38 by coder             #+#    #+#              #
-#    Updated: 2022/09/28 05:49:45 by coder            ###   ########.fr        #
+#    Updated: 2022/09/28 19:15:55 by coder            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,10 +77,10 @@ B_OBJS = ft_lstnew.o       \
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rc $(NAME) $(OBJS)
+	@ar rc $(NAME) $(OBJS)
 
 $(OBJS): $(SRCS)
-	cc $(CCFLAGS) -I $(PATH_INCL) -c $(SRCS)
+	@cc $(CCFLAGS) -I $(PATH_INCL) -c $(SRCS)
 
 bonus: $(NAME) $(B_OBJS)
 
