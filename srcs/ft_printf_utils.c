@@ -1,21 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_printf_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: coder <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/27 12:28:37 by coder             #+#    #+#             */
-/*   Updated: 2022/09/28 06:20:49 by coder            ###   ########.fr       */
+/*   Created: 2022/09/27 23:30:35 by coder             #+#    #+#             */
+/*   Updated: 2022/09/28 07:19:10 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
-# include "libft.h"
-# include <stdarg.h>
+#include "ft_printf.h"
 
-void	print_hex(int n, char option);
-int		ft_printf(const char *format, ...);
-void	print_pointer(void *p);
-#endif
+void	print_pointer(void *p)
+{
+	char	*hold;
+
+	hold = p;
+}
