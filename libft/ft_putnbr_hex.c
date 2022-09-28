@@ -1,51 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putnbr_hex.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: coder <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 19:01:16 by coder             #+#    #+#             */
-/*   Updated: 2022/09/28 05:40:36 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/28 06:54:18 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#define HEXL "0123456789abcdef"
+#define HEXU "0123456789ABCDEF"
 
-static int		check_min(int nb, int fd);
+static int		check_min(int nb);
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_hex(int n, char option)
 {
 	char	num;
 
 	num = 0;
-	if (check_min(n, fd) == 0)
+	if (check_min(n) == 0)
 		return ;
-	if (n >= 16)
+	if (n >= 10)
 	{
-		num = n % 16 + '0';
-		n = n / 16 ;
-		ft_putnbr_fd(n, fd);
-		write(fd, &num, 1);
+		if (option == 'l')
+			num = HEXL[n % 16];
+		else if (option == 'u')
+			num = HEXU[n % 16];
+		n = n / 16;
+		ft_putnbr_hex(n, option);
+		write(1, &num, 1);
 	}
 	else if (0 <= n && n <= 9)
 	{
 		n = n + '0';
-		write(fd, &n, 1);
+		write(1, &n, 1);
 	}
 	else if (n < 0)
-	{
-		n = n * (-1);
-		write(fd, "-", 1);
-		ft_putnbr_fd(n, fd);
-	}
+		;
 }
 
-static int	check_min(int nb, int fd)
+static int	check_min(int nb)
 {
 	if (nb == -2147483648)
 	{
-		write(fd, "-2147483648", 11);
+		write(1, "-2147483648", 11);
 		return (0);
 	}
 	else
