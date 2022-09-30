@@ -6,7 +6,7 @@
 /*   By: coder <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 19:01:16 by coder             #+#    #+#             */
-/*   Updated: 2022/09/30 20:21:38 by coder            ###   ########.fr       */
+/*   Updated: 2022/10/01 01:00:17 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,13 @@ static int	last_write(int n, char option)
 	return (sub_print_len);
 }
 
-int	ft_putnbr_hex(long int n, char option)
+int	ft_putnbr_hex(unsigned long long n, char option)
 {
-	char			num;
-	static int		print_len;
+	char	num;
+	int		print_len;
 
 	num = 0;
-	if (n < 0)
-		n = n * -1;
+	print_len = 0;
 	if (n >= 16)
 	{
 		if (option == 'l')
@@ -52,7 +51,7 @@ int	ft_putnbr_hex(long int n, char option)
 		else if (option == 'u')
 			num = HEX_UPPER[n % 16];
 		n = n / 16;
-		ft_putnbr_hex(n, option);
+		print_len += ft_putnbr_hex(n, option);
 		print_len += write(1, &num, 1);
 	}
 	else if (0 <= n && n <= 16)

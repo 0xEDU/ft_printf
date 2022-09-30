@@ -6,7 +6,7 @@
 #    By: coder <coder@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/27 15:51:38 by coder             #+#    #+#              #
-#    Updated: 2022/09/30 18:11:12 by coder            ###   ########.fr        #
+#    Updated: 2022/10/01 01:13:43 by coder            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -82,12 +82,6 @@ $(NAME): $(OBJS)
 $(OBJS): $(SRCS)
 	@cc $(CCFLAGS) -I $(PATH_INCL) -c $(SRCS)
 
-bonus: $(NAME) $(B_OBJS)
-
-$(B_OBJS): $(B_SRC)
-	cc $(CCFLAGS) -c $(B_SRCS) -I $(PATH_SRCS)
-	ar rcs $(NAME) $(B_OBJS)
-
 clean:
 	/bin/rm -f $(OBJS)
 
@@ -95,5 +89,3 @@ fclean: clean
 	/bin/rm -f $(NAME)
 
 re: fclean all
-
-re_bonus: fclean bonus
