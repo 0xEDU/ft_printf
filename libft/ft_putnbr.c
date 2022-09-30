@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: coder <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 19:01:16 by coder             #+#    #+#             */
-/*   Updated: 2022/10/01 01:14:50 by coder            ###   ########.fr       */
+/*   Updated: 2022/10/01 01:19:03 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putnbr_fd(long long n)
+int	ft_putnbr(long long n)
 {
 	char	num;
 	int		len;
@@ -23,7 +23,7 @@ int	ft_putnbr_fd(long long n)
 	{
 		num = n % 10 + '0';
 		n = n / 10;
-		len += ft_putnbr_fd(n);
+		len += ft_putnbr(n);
 		len += write(1, &num, 1);
 	}
 	else if (0 <= n && n <= 9)
@@ -35,7 +35,7 @@ int	ft_putnbr_fd(long long n)
 	{
 		n = n * (-1);
 		len += write(1, "-", 1);
-		len += ft_putnbr_fd(n);
+		len += ft_putnbr(n);
 	}
 	return (len);
 }
