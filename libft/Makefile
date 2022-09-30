@@ -6,7 +6,7 @@
 #    By: coder <coder@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/27 15:51:38 by coder             #+#    #+#              #
-#    Updated: 2022/09/29 13:39:42 by edu              ###   ########.fr        #
+#    Updated: 2022/09/30 18:11:12 by coder            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,6 @@ SRCS = $(addprefix $(PATH_SRCS), ft_atoi.c \
 	   ft_putchar.c     \
 	   ft_putchar_fd.c  \
 	   ft_putendl_fd.c  \
-	   ft_putnbr_base.c \
 	   ft_putnbr_fd.c   \
 	   ft_putnbr_hex.c  \
 	   ft_putstr.c      \
