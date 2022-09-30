@@ -6,7 +6,7 @@
 /*   By: etachott <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 15:15:34 by etachott          #+#    #+#             */
-/*   Updated: 2022/09/12 11:27:47 by etachott         ###   ########.fr       */
+/*   Updated: 2022/09/30 20:31:14 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_itoa(int n)
 	long int	j;
 
 	i = get_digits(n);
-	str = malloc(sizeof(char) * i + 1);
+	str = ft_calloc(i + 1, sizeof(char));
 	if (n < 0)
 	{
 		j = n;

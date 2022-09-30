@@ -6,7 +6,7 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 15:51:37 by coder             #+#    #+#             */
-/*   Updated: 2022/09/29 15:26:18 by edu              ###   ########.fr       */
+/*   Updated: 2022/09/30 20:46:42 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
 int		ft_putstr(char *s);
 void	ft_putstr_fd(char *s, int fd);
-void	ft_putnbr_fd(int n, int fd);
+int		ft_putnbr_fd(int n, int fd);
 int		ft_putnbr_hex(long int n, char option);
 char	**ft_split(char const *s, char c);
 char	*ft_strchr(const char *s, int c);
