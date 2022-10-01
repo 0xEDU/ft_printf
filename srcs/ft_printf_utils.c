@@ -6,13 +6,13 @@
 /*   By: coder <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 23:30:35 by coder             #+#    #+#             */
-/*   Updated: 2022/09/30 19:39:02 by coder            ###   ########.fr       */
+/*   Updated: 2022/10/01 02:25:12 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		print_pointer(unsigned long int p)
+int	print_pointer(unsigned long int p)
 {
 	int	print_len;
 
