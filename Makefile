@@ -15,15 +15,13 @@ OBJS = $(SRCS:$(PATH_SRCS)/%.c=$(PATH_OBJS)/%.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(LIB)
+$(NAME): $(OBJS)
+	make -C $(LIB_DIR)
 	mv $(LIB) $(NAME)
 	ar rcs $(NAME) $(OBJS)
 
-$(OBJS): $(SRCS)
+$(OBJS): 
 	$(CC) $(CCFLAGS) -I $(PATH_INCL) -c $(SRCS)
-
-$(LIB):
-	make -C $(LIB_DIR)
 
 clean:
 	/bin/rm -rf $(OBJS)
@@ -32,3 +30,5 @@ fclean: clean
 	/bin/rm -rf $(NAME)
 
 re: fclean all
+
+.PHONY: all clean fclean re
