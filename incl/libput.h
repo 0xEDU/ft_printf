@@ -6,12 +6,12 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 15:51:37 by coder             #+#    #+#             */
-/*   Updated: 2022/10/01 02:41:25 by coder            ###   ########.fr       */
+/*   Updated: 2022/10/01 03:59:34 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef LIBPUT_H
+# define LIBPUT_H
 
 # include <unistd.h>
 
