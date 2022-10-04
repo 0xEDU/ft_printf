@@ -6,7 +6,7 @@
 /*   By: coder <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 12:27:56 by coder             #+#    #+#             */
-/*   Updated: 2022/10/01 15:49:13 by coder            ###   ########.fr       */
+/*   Updated: 2022/10/04 18:28:20 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	ft_printf(const char *fmt, ...)
 	int		len;
 
 	len = 0;
-	if (!fmt || fmt == NULL)
+	if (!fmt)
 		return (-1);
 	va_start(ap, fmt);
 	while (*fmt)
@@ -55,10 +55,7 @@ int	ft_printf(const char *fmt, ...)
 			len += print_formats(ap, *fmt);
 		}
 		else
-		{
-			ft_putchar(*fmt);
-			len++;
-		}
+			len += ft_putchar(*fmt);
 		fmt++;
 	}
 	va_end(ap);

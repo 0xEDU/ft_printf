@@ -6,7 +6,7 @@
 /*   By: coder <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 19:01:16 by coder             #+#    #+#             */
-/*   Updated: 2022/10/01 03:55:29 by coder            ###   ########.fr       */
+/*   Updated: 2022/10/04 18:34:08 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,18 @@ int	ft_putnbr(long long n)
 	if (n >= 10)
 	{
 		num = n % 10 + '0';
-		n = n / 10;
+		n /= 10;
 		len += ft_putnbr(n);
 		len += write(1, &num, 1);
 	}
 	else if (0 <= n && n <= 9)
 	{
-		n = n + '0';
+		n += '0';
 		len += write(1, &n, 1);
 	}
 	else if (n < 0)
 	{
-		n = n * (-1);
+		n *= (-1);
 		len += write(1, "-", 1);
 		len += ft_putnbr(n);
 	}
